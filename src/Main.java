@@ -1,6 +1,7 @@
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.TextStyle;
+import java.util.Arrays;
 import java.util.Locale;
 
 public class Main {
@@ -114,5 +115,41 @@ public class Main {
                 System.out.println(j + " x " + i + " = " + j*i);
             }
         }
+
+        // Vetores
+
+        int[] numeros = new int[5];
+        numeros[0] = 1;
+        numeros[1] = 2;
+        numeros[2] = 3;
+        numeros[3] = 4;
+        numeros[4] = 5;
+
+        System.out.println(Arrays.toString(numeros));
+
+        int[] valores = { 0, 10, 12, 35, 1 };
+        int maior = valores[0];
+        int menor = valores[0];
+        int media = 0;
+
+        for (int i=0; i < numeros.length; i++) {
+            if (valores[i] > maior) {
+                maior = valores[i];
+            }
+            if (valores[i] < menor) {
+                menor = valores[i];
+            }
+            media += valores[i];
+        }
+
+        System.out.println("Maior: " + maior);
+        System.out.println("Menor: " + menor);
+        System.out.println("Média: " + media / 5);
+
+
+
+
+
+
     }
 }
