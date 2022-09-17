@@ -5,8 +5,8 @@ public class Main {
 
         // Declaração de variáveis de tipo primitivo
         String nome;
-        nome = "Larissa";
-        nome = "Leonardo"; // Reatribuição
+        nome = "João";
+        nome = "Maria"; // Reatribuição
         System.out.println("Hello " + nome);
 
         //Operadores artméticos
@@ -45,6 +45,33 @@ public class Main {
         String menssagem = fimDeSemana ? "É fim de semana!!" : "Não é fim de semana";
 
         System.out.println(menssagem);
+
+        // Estruturas condicionais
+
+        int nota = 70;
+        String graduacao;
+
+        if (nota >= 70) {
+            graduacao = "A";
+        } else if (nota < 70 && nota > 60) {
+            graduacao = "B";
+        } else {
+            graduacao = "C";
+        }
+
+        switch (graduacao) {
+            case "A":
+                System.out.println("Aluno aprovado!");
+                break;
+            case "B":
+                System.out.println("Aluno em recuperação!");
+                break;
+            case "C":
+                System.out.println("Aluno reprovado!");
+                break;
+            default:
+                System.out.println("Graduação inválida!");
+        }
     }
 
 }
