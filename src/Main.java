@@ -22,6 +22,29 @@ public class Main {
         System.out.println(subtracao);
         System.out.println(multiplicacao);
         System.out.println(divisao);
+
+        // Operadores lógicos
+
+        boolean fimDeSemana = true;
+        boolean fazendoSol = true;
+        boolean vamosAPraia = fimDeSemana && fazendoSol;
+
+        System.out.println(vamosAPraia);
+
+        // Tabela verdade
+        // Operador && (AND)
+        // true && true = true
+        // true && false = false
+        // false && false = false
+
+        // Operador || (OR)
+        // true || true = true
+        // true || false = true
+        // false || false = false
+
+        String menssagem = fimDeSemana ? "É fim de semana!!" : "Não é fim de semana";
+
+        System.out.println(menssagem);
     }
 
 }
