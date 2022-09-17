@@ -1,3 +1,8 @@
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.TextStyle;
+import java.util.Locale;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -72,6 +77,37 @@ public class Main {
             default:
                 System.out.println("Graduação inválida!");
         }
+
+        // Manipulação de Strings e datas
+
+        String name = "Larissa";
+        System.out.println(name.toUpperCase());
+        System.out.println(name.toLowerCase());
+        System.out.println(name.length());
+
+        String anotherName = "leonardo";
+        System.out.println(name.equals(anotherName));
+        System.out.println(name.equalsIgnoreCase(anotherName));
+
+        // Data pela ISO 8601
+
+        LocalDate hoje = LocalDate.now();
+        Locale brasil = new Locale( "pt", "BR");
+        String diaSemana = hoje.getDayOfWeek().getDisplayName(TextStyle.FULL, brasil);
+        LocalDateTime agora = LocalDateTime.now();
+        String saudacao = "";
+
+        if (agora.getHour() >= 0) {
+            saudacao = "Bom dia";
+        } else if (agora.getHour() >= 12 && agora.getHour() < 18) {
+            saudacao = "Boa Tarde";
+        } else if (agora.getHour() >= 18 && agora.getHour() < 24) {
+            saudacao = "Boa noite";
+        }
+
+        System.out.printf("Olá, %s. Hoje é %s.%n", name, diaSemana, saudacao.toUpperCase());
+
+
     }
 
 }
