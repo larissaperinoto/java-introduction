@@ -145,11 +145,10 @@ public class Main {
         System.out.println("Maior: " + maior);
         System.out.println("Menor: " + menor);
         System.out.println("Média: " + media / 5);
+        myFunction(name);
+    }
 
-
-
-
-
-
+    public static void myFunction(String nameParametro) {
+        System.out.println("Hello, " + nameParametro);
     }
 }
